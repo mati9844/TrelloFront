@@ -8,6 +8,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { TestoComponent } from './testo/testo.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import {RestapiService} from "./_services/restapi.service";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -20,9 +22,10 @@ import { RegisterComponent } from './register/register.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [RestapiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
